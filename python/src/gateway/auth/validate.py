@@ -22,7 +22,7 @@ def token(request):
         return None, ("No credentials provided", 401)
 
     response = requests.post(
-        f"{os.environ.get('AUTH_SVC_URL')}/validate",
+        f"{os.environ.get('AUTH_SVC_ADDRESS')}/validate",
         headers={"Authorization": token},
     )
 

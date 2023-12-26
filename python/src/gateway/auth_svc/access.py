@@ -17,7 +17,7 @@ def login(request):
 
     basicAuth = (auth.username, auth.password)
     response = requests.post(
-        f"{os.environ.get('AUTH_SVC_URL')}/login",
+        f"http://{os.environ.get('AUTH_SVC_ADDRESS')}/login",
         auth=basicAuth
     )
 
